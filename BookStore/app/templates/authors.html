@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} BookStore App {% endblock %}
+
+{% block content %}
+  <div class="row container">
+    {% for author in author_list %}
+      <div class="col-sm-6 p-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ author.name }}</h5>
+            <p class="card-text">Birthday: {{author.birthday}}</p>
+          </div>
+          <div class="card-footer text-muted">
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

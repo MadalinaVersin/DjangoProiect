@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %} Social App {% endblock %}
+{% block title %} BookStore {% endblock %}
 
 {% block content %}
 <a href="{% url 'author_list' %}" class="btn btn-primary">Authors</a>
@@ -11,8 +11,8 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">{{ book.name }}</h5>
-            <p class="card-text">Created by:{{ book.author.name }}</p>
-            <a href="{% url 'book_detail' book.id %}" class="btn btn-primary">See book details</a>
+            <p class="card-text">Author:{{ book.author.name }}</p>
+            <a href="{% url 'book_detail' book.id %}" class="btn btn-primary">Book details</a>
           </div>
           <div class="card-footer text-muted">
           </div>
